@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMRGNCY</title>
+</head>
+
+<body>
+    <style>
+      /* Hello nice to meet you :) */
+        :root{
+            --bg-color: #041e42;
+            --bg-color-s: #c8102e;
+            --text-color: white
+        }
+        body{
+            height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        header{
+            background-color: var(--bg-color-s);
+        }
+        main{
+            height: max-content;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            background-color: var(--bg-color-s);
+        }
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav__app{
+            display: flex;
+            justify-content: start;
+        }
+        .app{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .app__img-log{
+            width:15vh;
+            height:15vh;
+            max-width: 50vw;
+            min-width: 5vw;
+        }
+        .app__title{
+            font-weight: 600;
+        }
+        .app__store_link{
+            display: flex;
+            justify-content: center;
+        }
+        .app__legal{
+            font-style: italic;
+            font-size: small;
+        }
+    </style>
+    <header>
+        <h1>EMRGNCY</h1>
+    </header>
+    <main class="container">
+
+        <h2>Public App's</h2>
+        <div class="nav__app">
+            <div id='lla' class="app">
+                <img src="https://lh3.googleusercontent.com/zj5MMwG9rIBUH7vTSTmHM4FBk-7r0ehxGTCeFSlLg9zyJJG2HluYsoT5db0w2SXvtQM" alt="Learn Language Audio Logo" class="app__img-logo">
+                <a class="app__title" href="./learn_languages_with_audio">Learn Language Audio</a>
+                <div class="app__store_link"></div>
+                <div class="app__legal">
+                    <a href="./learn_languages_with_audio/policy.html">Privacy Policy</a>
+                    <a href="./learn_languages_with_audio/terms.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer> All right reserved to EMRGNCY</footer>
+</body>
+
+</html>
