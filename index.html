@@ -39,9 +39,6 @@
             background-color: var(--bg-color-s);
             padding: 5px 0;
         }
-        a{
-            text-decoration
-        }
         .container {
             margin-left: auto;
             margin-right: auto;
@@ -76,17 +73,153 @@
             font-size: small;
         }
     </style>
+
+    <!-- OVERIDE -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+    </style>
+    <style>
+        :root {
+            --white: white;
+            --ink-100: #525a65;
+            --ink-50: #dde6f288;
+            --px: 30px;
+        }
+        * { color: var(--ink-100); }
+        header {
+            height: 72px;
+            margin: 0;
+            padding: 0;
+            padding-right: var(--px);
+            padding-left: var(--px);
+            display: flex;
+            align-items: center;
+            background: var(--white);
+            box-shadow: 0 0 30px #00000024;
+            z-index: 999;
+            position: relative;
+            border-bottom: solid 1px #d6d7d8;
+            overflow: hidden;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); */
+        }
+        h1 {
+            font-family: 'Noto Sans';
+            width: fit-content;
+        }
+        h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans' !important;
+            font-weight: bold;
+            width: fit-content;
+        }
+        h2:after {
+            content: '';
+            position: relative;
+            width: 100%;
+            bottom: -5px;
+            background-color: #ffcb6380;
+            /* border: solid 2px green; */
+            display: block;
+            height: 6px;
+            border-radius: 1px;
+        }
+        .container {
+            margin : 0;
+            padding: 0;
+            padding-top: 50px;
+            --px-ofst: 290px;
+            padding-right: calc( var(--px) + var(--px-ofst) );
+            padding-left: calc( var(--px) + var(--px-ofst) );
+            background: white;
+        }
+        .nav__app {
+            /* border-radius: 4px; */
+            padding: 0;
+            border: 0;
+            margin-top: 15px;
+            margin-top: 35px;
+        }
+        .app {
+            width: 24%;
+            display: flex;
+            justify-content: flex-start;
+            transition-duration: .3s;
+            cursor: pointer;
+            padding-bottom: 14px;
+            border-radius: 5px;
+            /* border: solid 1px transparent; */
+            border: solid 1px #00000045;
+        }
+        .app:hover > .img_container {
+            /* box-shadow: 0 0 15px #00000021; */
+            /* border-color: #00000020; */
+        }
+        .app:hover > .img_container > img {
+            transform: Scale(1.18);
+        }
+        .app > .img_container {
+            background-color: #e2e2e25e;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition-duration: 0.7s;
+        }
+        .app > .img_container > img {
+            transition: transform 0.8s;
+            transform-origin: center;
+        }
+        .app > div:not(.img_container) {
+            width: 100%;
+            text-align: center;
+        }
+        .app > .app__title {
+            font-family: 'Noto Sans';
+            font-size: 13pt;
+            text-decoration: none;
+            --p: 15px;
+            padding-top: var(--p);
+            padding-bottom: var(--p);
+        }
+        footer {
+            background: #474d56;
+            color: white;
+            padding-top: 20px;
+        }
+
+        /** TEMPORAIRE **/
+        .app__store_link {
+            display: none;
+            height: 80px;
+            border: dashed 1px #00000025;
+            border-left: none;
+            border-right: none;
+            margin-bottom: 15px;
+        }
+    </style>
+
     <header>
         <h1>EMRGNCY</h1>
     </header>
     <main class="container">
 
-        <h2>Public App's</h2>
+        <h2>Public Apps</h2>
         <div class="nav__app">
             <div id='lla' class="app">
-                <img src="https://lh3.googleusercontent.com/zj5MMwG9rIBUH7vTSTmHM4FBk-7r0ehxGTCeFSlLg9zyJJG2HluYsoT5db0w2SXvtQM" alt="Learn Language Audio Logo" class="app__img-logo">
+                <div class="img_container">
+                    <img src="https://lh3.googleusercontent.com/zj5MMwG9rIBUH7vTSTmHM4FBk-7r0ehxGTCeFSlLg9zyJJG2HluYsoT5db0w2SXvtQM" alt="Learn Language Audio Logo" class="app__img-logo">
+                </div>
                 <a class="app__title" href="./learn_languages_with_audio">Learn Language Audio</a>
-                <div class="app__store_link"></div>
+                <div class="app__store_link">
+                    Badges here
+                </div>
                 <div class="app__legal">
                     <a href="./learn_languages_with_audio/privacy.html">Privacy Policy</a>
                     <a href="./learn_languages_with_audio/terms.html">Terms & Conditions</a>
